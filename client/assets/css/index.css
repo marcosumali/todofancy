@@ -1,0 +1,135 @@
+/* ===========================================LOGIN CSS=========================================== */
+
+/* .form-elegant .font-small {
+    font-size: 0.8rem; }
+
+.form-elegant .z-depth-1a {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25);
+    box-shadow: 0 2px 5px 0 rgba(55, 161, 255, 0.26), 0 4px 12px 0 rgba(121, 155, 254, 0.25); }
+
+.form-elegant .z-depth-1-half,
+.form-elegant .btn:hover {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15);
+    box-shadow: 0 5px 11px 0 rgba(85, 182, 255, 0.28), 0 4px 15px 0 rgba(36, 133, 255, 0.15); }
+
+.form-elegant .modal-header {
+    border-bottom: none; }
+
+.modal-dialog .form-elegant .btn .fa {
+    color: #2196f3!important; }
+
+.form-elegant .modal-body, .form-elegant .modal-footer {
+    font-weight: 400; } */
+
+
+#sign-out {
+    /* display: none; */
+}
+
+.reg-success {
+    display: none;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-success {
+    display: none;
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-fail {
+    display: none;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* ===========================================BODY CSS=========================================== */
+
+.greet, .prologue {
+    text-align: center;
+}
+
+.input-section-todo {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+}
+
+.todolist-row {
+    border: 1px solid black;
+    display: flex;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    justify-content: flex-start;
+}
+
+.todolist {
+    /* border: 1px solid black; */
+    align-self: center;
+}
+
+.close {
+    align-self: center;
+}
+
+.container-todolist {
+    display: flex;
+    justify-content: center;
+}
+
+.items-todolist {
+    align-self: center;
+}
+
+.container-box-body {
+    margin-top: 40px;
+}
+
+
+body {
+    background-image: url("../image/coffe-red-table.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 100% center; */
+}
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+
+.bounce-enter-active {
+    animation: bounce-in .5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in .5s reverse;
+}
+
+@keyframes bounce-in {
+0% {
+    transform: scale(0);
+}
+50% {
+    transform: scale(1.5);
+}
+100% {
+    transform: scale(1);
+}
+}
