@@ -12,7 +12,7 @@ var login = Vue.component('login', {
                 email: this.logusername,
                 password: this.logpassword
             }
-            // console.log('ini form dari child', obj)
+            console.log('ini form dari child', obj)
             this.$emit('loguser', obj)
         }
     },
@@ -53,7 +53,7 @@ var login = Vue.component('login', {
                             <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign In with:</p>
 
                             <div class="row my-3 d-flex justify-content-center">            
-                                <fblogin></fblogin>            
+                                <!-- <fblogin></fblogin> -->            
                                 <!-- <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fa fa-facebook text-center"></i></button> -->
                             </div>
                         </div>
