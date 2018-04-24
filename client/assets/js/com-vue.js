@@ -24,7 +24,7 @@ new Vue({
         login: login,
         inputsection: inputsection,
         showtodo: showtodo,
-        fblogin: fblogin
+        // fblogin: fblogin
     },
     created: function() {
         this.showTodos();
@@ -37,9 +37,9 @@ new Vue({
                 email: e.email,
                 password: e.password,
             }
-            // console.log(userObj)
+            console.log(userObj)
 
-            axios.post('http://localhost:3000/users/register', userObj)
+            axios.post('http://35.185.183.253/users/register', userObj)
             .then((result) => {
 
                 localStorage.setItem('token', result.data.token);
@@ -59,7 +59,7 @@ new Vue({
                     description: 'Please press enter to input',
                 }
 
-                axios.post('http://localhost:3000/todos', todoObj)
+                axios.post('http://35.185.183.253/todos', todoObj)
                     .then((result) => {
                         console.log(result)
                     })
@@ -69,7 +69,7 @@ new Vue({
                 }, 2000);
             })
             .catch(function (error) {
-                console.log(error);
+                console.log('ini error ya',error);
             });
 
         },
@@ -78,9 +78,9 @@ new Vue({
                 email: e.email,
                 password: e.password,
             }
-            // console.log(userObj);
+            console.log('ini dari vue.js',userObj);
             
-            axios.post('http://localhost:3000/users/login', userObj)
+            axios.post('http://35.185.183.253/users/login', userObj)
             .then((result) => {
                 // console.log('masuk axios login')
                 // let checkToken = localStorage.getItem('token');
@@ -101,7 +101,7 @@ new Vue({
                 }, 2000);
             })
             .catch((error) => {
-                
+                console.log(error);
                 if (error.response.data.message == 'Error: Username or password is null') {
                     this.login_status_fail = 'Your Username or Password cannot empty !';
                     $('.login-fail').css({'display':'block'});
@@ -145,7 +145,7 @@ new Vue({
                     $('#input-todo').val('');
 
                 } else {
-                    axios.post('http://localhost:3000/todos', todoObj)
+                    axios.post('http://35.185.183.253/todos', todoObj)
                     .then((result) => {
                         this.empty_status = '';                        
                         this.show_empty_status = false;
@@ -173,7 +173,7 @@ new Vue({
             // console.log('ini hasil dari token',token);
             
             if (token) {
-                axios.post('http://localhost:3000/todos/find', {token: token})
+                axios.post('http://35.185.183.253/todos/find', {token: token})
                 .then((result) => {
                     // console.log('hasil post axios',result);
 
@@ -208,7 +208,7 @@ new Vue({
             }
             // console.log(todoObj);
 
-            axios.post('http://localhost:3000/todos/delete', todoObj)
+            axios.post('http://35.185.183.253/todos/delete', todoObj)
             .then(result => {
                 // console.log(result);
                 let index = this.todolists.indexOf(result.data.id_todo);
