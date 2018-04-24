@@ -102,6 +102,7 @@ body {
     background-image: url("../image/coffe-red-table.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
     /* background-position: 100% center; */
 }
 
